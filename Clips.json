@@ -1,0 +1,437 @@
+{
+  "clips" : [
+    {
+      "children" : [
+        {
+          "content" : "<div class=\"govuk-grid-column-${0:Col size: full, one-half, one-third, two-thirds, one-quarter, three-quarters}\">\n  $1\n<\/div>",
+          "name" : "GOV.UK Layout Column",
+          "scope" : "editor",
+          "trigger" : "gov-col"
+        },
+        {
+          "content" : "<div class=\"govuk-grid-row\">\n  <div class=\"govuk-grid-column-two-thirds\">\n\t<h1 class=\"govuk-heading-xl\">Two-thirds column<\/h1>\n\t<p class=\"govuk-body\">This is a paragraph inside a two-thirds wide column<\/p>\n  <\/div>\n<\/div>",
+          "name" : "GOV.UK Layout Two-thirds",
+          "scope" : "editor",
+          "trigger" : "gov-2"
+        },
+        {
+          "content" : "<div class='govuk-grid-row'>\n  <div class=\"govuk-grid-column-two-thirds\">\n\t<h1 class=\"govuk-heading-xl\">Two-thirds column<\/h1>\n\t<p class=\"govuk-body\">This is a paragraph inside a two-thirds wide column<\/p>\n  <\/div>\n\n  <div class=\"govuk-grid-column-one-thirds\">\n\t<h1 class=\"govuk-heading-xl\">One-thirds column<\/h1>\n\t<p class=\"govuk-body\">This is a paragraph inside a one-thirds wide column<\/p>\n  <\/div>\n<\/div>",
+          "name" : "GOV.UK Layout Two-thirds \/ One-third",
+          "scope" : "editor",
+          "trigger" : "gov-2-1"
+        },
+        {
+          "content" : "<div class='govuk-grid-row'>\n  $0\n<\/div>",
+          "name" : "GOV.UK Layout Grid Row",
+          "scope" : "editor",
+          "trigger" : "gov-row"
+        },
+        {
+          "content" : "{% extends \"layout.html\" %}\n\n{% block beforeContent %}\n\t{{ govukBackLink({\n\t\thtml: 'Back',\n\t\thref: 'javascript:history.back()'\n\t}) }}\n{% endblock %}\n\n{% block content %}\n\t<div class=\"govuk-grid-row\">\n\t\t<div class=\"govuk-grid-column-two-thirds\">\n\t\t\t<form method=\"post\">\n\n\t\t\t\t$0\n\t\t\t\t\n\t\t\t\t{{ govukButton({\n\t\t\t\t\thtml: 'Continue'\n\t\t\t\t}) }}\n\n\t\t\t<\/form>\n\t\t<\/div>\n\t<\/div>\n{% endblock %}\n\n{% block pageScripts %}{% endblock %}",
+          "name" : "GOV.UK Question Page",
+          "scope" : "editor",
+          "trigger" : "gov-question-page"
+        },
+        {
+          "content" : "{% extends \"layout.html\" %}\n\n{% block content %}\n\t<div class=\"govuk-grid-row\">\n\t\t<div class=\"govuk-grid-column-two-thirds\">\n\t\t\t\n\t\t\t{{ govukPanel({\n\t\t\t\ttitleHtml: '${0:Application complete}',\n\t\t\t\thtml: '${1:Your reference number<br><strong>HDJ2123F<\/strong>}',\n\t\t\t\theadingLevel: ${2:1-6. Default: 1},\n\t\t\t\tclasses: '$3'\n\t\t\t}) }}$99\n\t\t\t\n\t\t\t<p>We have sent you a confirmation email.<\/p>\n\t\t\t\n\t\t\t<h2 class=\"govuk-heading-m\">What happens next<\/h2>\n\t\t\t\n\t\t\t<p>We&rsquo;ve sent your application to Hackney Electoral Register Office.<\/p>\n\t\t\t<p>They will contact you either to confirm your registration, or to ask for more information.<\/p>\n\t\t\t\n\t\t\t<p>\n\t\t\t\t<a href=\"#0\">What did you think of this service?<\/a> (takes 30 seconds)\n\t\t\t<\/p>\n\n\t\t<\/div>\n\t<\/div>\n{% endblock %}\n\n{% block pageScripts %}{% endblock %}",
+          "name" : "GOV.UK Confirmation Page",
+          "scope" : "editor",
+          "trigger" : "gov-confirmation-page"
+        },
+        {
+          "content" : "{% extends \"layout.html\" %}\n\n{% block content %}\n\t<div class=\"govuk-grid-row\">\n\t\t<div class=\"govuk-grid-column-two-thirds\">\n\t\t\t<h1 class=\"govuk-heading-xl\">\n\t\t\t\t{{ serviceName }}\n\t\t\t<\/h1>\n\n\t\t\t<h2 class=\"govuk-heading-s govuk-!-margin-bottom-2\">Application incomplete<\/h2>\n\t\t\t<p class=\"govuk-body govuk-!-margin-bottom-7\">You have completed 3 of 8 sections.<\/p>\n\n\t\t\t<ol class=\"app-task-list\">\n\t\t\t\t<li>\n\t\t\t\t\t<h2 class=\"app-task-list__section\">\n\t\t\t\t\t\t<span class=\"app-task-list__section-number\">1. <\/span> Check before you start\n\t\t\t\t\t<\/h2>\n\t\t\t\t\t<ul class=\"app-task-list__items\">\n\t\t\t\t\t\t<li class=\"app-task-list__item\">\n\t\t\t\t\t\t\t<span class=\"app-task-list__task-name\">\n\t\t\t\t\t\t\t\t<a href=\"#0\">\n\t\t\t\t\t\t\t\t\tCheck eligibility\n\t\t\t\t\t\t\t\t<\/a>\n\t\t\t\t\t\t\t<\/span>\n\t\t\t\t\t\t\t{{ govukTag({\n\t\t\t\t\t\t\t\thtml: 'Completed',\n\t\t\t\t\t\t\t\tclasses: 'app-task-list__tag'\n\t\t\t\t\t\t\t}) }}\n\t\t\t\t\t\t\t<strong class=\"govuk-tag app-task-list__tag\" id=\"eligibility-status\">Completed<\/strong>\n\t\t\t\t\t\t<\/li>\n\t\t\t\t\t\t<li class=\"app-task-list__item\">\n\t\t\t\t\t\t\t<span class=\"app-task-list__task-name\">\n\t\t\t\t\t\t\t\t<a href=\"#0\">\n\t\t\t\t\t\t\t\t\tRead declaration\n\t\t\t\t\t\t\t\t<\/a>\n\t\t\t\t\t\t\t<\/span>\n\t\t\t\t\t\t\t{{ govukTag({\n\t\t\t\t\t\t\t\thtml: 'Completed',\n\t\t\t\t\t\t\t\tclasses: 'app-task-list__tag'\n\t\t\t\t\t\t\t}) }}\n\t\t\t\t\t\t<\/li>\n\t\t\t\t\t<\/ul>\n\t\t\t\t<\/li>\n\n\t\t\t\t<li>\n\t\t\t\t\t<h2 class=\"app-task-list__section\">\n\t\t\t\t\t\t<span class=\"app-task-list__section-number\">2. <\/span> Prepare application\n\t\t\t\t\t<\/h2>\n\t\t\t\t\t<ul class=\"app-task-list__items\">\n\t\t\t\t\t\t<li class=\"app-task-list__item\">\n\t\t\t\t\t\t\t<span class=\"app-task-list__task-name\">\n\t\t\t\t\t\t\t\t<a href=\"#0\">\n\t\t\t\t\t\t\t\t\tCompany information\n\t\t\t\t\t\t\t\t<\/a>\n\t\t\t\t\t\t\t<\/span>\n\t\t\t\t\t\t\t{{ govukTag({\n\t\t\t\t\t\t\t\thtml: 'Completed',\n\t\t\t\t\t\t\t\tclasses: 'app-task-list__tag'\n\t\t\t\t\t\t\t}) }}\n\t\t\t\t\t\t<\/li>\n\t\t\t\t\t\t<li class=\"app-task-list__item\">\n\t\t\t\t\t\t\t<span class=\"app-task-list__task-name\">\n\t\t\t\t\t\t\t\t<a href=\"#0\">\n\t\t\t\t\t\t\t\t\tYour contact details\n\t\t\t\t\t\t\t\t<\/a>\n\t\t\t\t\t\t\t<\/span>\n\t\t\t\t\t\t\t{{ govukTag({\n\t\t\t\t\t\t\t\thtml: 'In progress',\n\t\t\t\t\t\t\t\tclasses: 'govuk-tag--blue app-task-list__tag'\n\t\t\t\t\t\t\t}) }}\n\t\t\t\t\t\t<\/li>\n\t\t\t\t\t\t<li class=\"app-task-list__item\">\n\t\t\t\t\t\t\t<span class=\"app-task-list__task-name\">\n\t\t\t\t\t\t\t\t<a href=\"#0\">\n\t\t\t\t\t\t\t\t\tList convictions\n\t\t\t\t\t\t\t\t<\/a>\n\t\t\t\t\t\t\t<\/span>\n\t\t\t\t\t\t\t{{ govukTag({\n\t\t\t\t\t\t\t\thtml: 'Not started',\n\t\t\t\t\t\t\t\tclasses: 'govuk-tag--grey app-task-list__tag'\n\t\t\t\t\t\t\t}) }}\n\t\t\t\t\t\t<\/li>\n\t\t\t\t\t\t<li class=\"app-task-list__item\">\n\t\t\t\t\t\t\t<span class=\"app-task-list__task-name\">\n\t\t\t\t\t\t\t\tProvide financial evidence\n\t\t\t\t\t\t\t<\/span>\n\t\t\t\t\t\t\t{{ govukTag({\n\t\t\t\t\t\t\t\thtml: 'Cannot start yet',\n\t\t\t\t\t\t\t\tclasses: 'govuk-tag--grey app-task-list__tag'\n\t\t\t\t\t\t\t}) }}\n\t\t\t\t\t\t<\/li>\n\t\t\t\t\t\t<li class=\"app-task-list__item\">\n\t\t\t\t\t\t\t<span class=\"app-task-list__task-name\">\n\t\t\t\t\t\t\t\tGive medical information\n\t\t\t\t\t\t\t<\/span>\n\t\t\t\t\t\t\t{{ govukTag({\n\t\t\t\t\t\t\t\thtml: 'Cannot start yet',\n\t\t\t\t\t\t\t\tclasses: 'govuk-tag--grey app-task-list__tag'\n\t\t\t\t\t\t\t}) }}\n\t\t\t\t\t\t<\/li>\n\t\t\t\t\t<\/ul>\n\t\t\t\t<\/li>\n\n\t\t\t\t<li>\n\t\t\t\t\t<h2 class=\"app-task-list__section\">\n\t\t\t\t\t\t<span class=\"app-task-list__section-number\">3. <\/span> Apply\n\t\t\t\t\t<\/h2>\n\t\t\t\t\t<ul class=\"app-task-list__items\">\n\t\t\t\t\t\t<li class=\"app-task-list__item\">\n\t\t\t\t\t\t\t<span class=\"app-task-list__task-name\">\n\t\t\t\t\t\t\t\tSubmit and pay\n\t\t\t\t\t\t\t<\/span>\n\t\t\t\t\t\t\t{{ govukTag({\n\t\t\t\t\t\t\t\thtml: 'Cannot start yet',\n\t\t\t\t\t\t\t\tclasses: 'govuk-tag--grey app-task-list__tag'\n\t\t\t\t\t\t\t}) }}\n\t\t\t\t\t\t<\/li>\n\t\t\t\t\t<\/ul>\n\t\t\t\t<\/li>\n\t\t\t<\/ol>\n\t\t<\/div>\n\t<\/div>\n{% endblock %}\n\n{% block pageScripts %}{% endblock %}",
+          "name" : "GOV.UK Task List Page",
+          "scope" : "editor",
+          "trigger" : "gov-task-list-page"
+        }
+      ],
+      "name" : "Layout and Pages"
+    },
+    {
+      "children" : [
+        {
+          "content" : "<h${0:1, 2, 3, 4, 5, 6} class=\"govuk-heading-${1:xl, l, m, s}\">\n\t${2:Header text}\n<\/h${0:1, 2, 3, 4, 5, 6}>",
+          "name" : "GOV.UK Typography Header",
+          "scope" : "editor",
+          "trigger" : "gov-h"
+        },
+        {
+          "content" : "<span class=\"govuk-caption-${0:xl, l, m, s}\">\n\t${1:Caption text}\n<\/span>",
+          "name" : "GOV.UK Typography Caption",
+          "scope" : "editor",
+          "trigger" : "gov-caption"
+        },
+        {
+          "content" : "<p class=\"govuk-body-l\">\n\t${0:Lead text}\n<\/p>",
+          "name" : "GOV.UK Typography Lead",
+          "scope" : "editor",
+          "trigger" : "gov-lead"
+        },
+        {
+          "content" : "<p class=\"govuk-body-s\">\n\t${0:Small text}\n<\/p>",
+          "name" : "GOV.UK Typography Small",
+          "scope" : "editor",
+          "trigger" : "gov-small"
+        },
+        {
+          "content" : "<a href=\"${0:URL}\" class=\"govuk-link ${1:govuk-link--no-vistied-state, govuk-link--inverse, govuk-link--no-underline}\">${2:Link text}<\/a>",
+          "name" : "GOV.UK Typography Link",
+          "scope" : "editor",
+          "trigger" : "gov-a"
+        },
+        {
+          "content" : "<a href=\"${0:URL}\" class=\"govuk-link\" rel=\"noreferrer noopener\" target=\"_blank\">${1:Link text} (opens in new tab)<\/a>",
+          "name" : "GOV.UK Typography Link (New Tab)",
+          "scope" : "editor",
+          "trigger" : "gov-a-tab"
+        },
+        {
+          "content" : "<${0:ul or ol} class=\"govuk-list govuk-list--${1:bullet or number}\">\n\t<li>${2:List text}<\/li>\n<\/${0:ul or ol}>",
+          "name" : "GOV.UK Typography List",
+          "scope" : "editor",
+          "trigger" : "gov-list"
+        },
+        {
+          "content" : "<hr class=\"govuk-section-break govuk-section-break--visible govuk-section-break--${1:m,l,xl}\">",
+          "name" : "GOV.UK Typography Section Break \/ HR",
+          "scope" : "editor",
+          "trigger" : "gov-hr"
+        }
+      ],
+      "name" : "Typography"
+    },
+    {
+      "children" : [
+        {
+          "content" : "govuk-!-font-size-${0:80, 48, 36, 27, 24, 19, 16, 14}",
+          "name" : "GOV.UK Override Font Class",
+          "scope" : "editor",
+          "trigger" : "gov-!-font"
+        },
+        {
+          "content" : "govuk-!-display-${0:block, inline, inline-block, none, none-print}",
+          "name" : "GOV.UK Override Display Class",
+          "scope" : "editor",
+          "trigger" : "gov-!-display"
+        },
+        {
+          "content" : "govuk-!-width-${0:full, three-quarters, two-thirds, one-half, one-third, one-quarter}",
+          "name" : "GOV.UK Override Width Class",
+          "scope" : "editor",
+          "trigger" : "gov-!-width"
+        },
+        {
+          "content" : "govuk-!-text-align-${0:left, right, centre}",
+          "name" : "GOV.UK Override Text Align Class",
+          "scope" : "editor",
+          "trigger" : "gov-!-text"
+        }
+      ],
+      "name" : "Override classes"
+    },
+    {
+      "children" : [
+        {
+          "content" : "{{ govukAccordion({\n\tid: '$0',\n\theadingLevel: ${1:1-6. Default: 2},\n\tclasses: '$2',\n\titems: [\n\t\t{\n\t\t\theading: {\n\t\t\t\ttext: '$3'\n\t\t\t},\n\t\t\tsummary: {\n\t\t\t\thtml: '$4'\n\t\t\t},\n\t\t\tcontent: {\n\t\t\t\thtml: '<p>$5<\/p>'\n\t\t\t},\n\t\t\texpanded: ${6:true or false}\n\t\t}\n\t]\n}) }}$99",
+          "name" : "GOV.UK Accordion",
+          "scope" : "editor",
+          "trigger" : "gov-accordion"
+        },
+        {
+          "content" : "{{ govukBackLink({\n\thtml: '${0:Back}',\n\thref: '${1:javascript:history.back()}'\n}) }}$99",
+          "name" : "GOV.UK Back Link",
+          "scope" : "editor",
+          "trigger" : "gov-back"
+        },
+        {
+          "content" : "{{ govukBreadcrumbs({\n\tclasses: '$0',\n\tcollapseOnMobile: ${1:true or false},\n\titems: [\n\t\t{\n\t\t\thtml: '${2:Home}',\n\t\t\thref: '$3'\n\t\t},\n\t\t{\n\t\t\thtml: '${4:Current page}'\n\t\t}\n\t]\n}) }}$99",
+          "name" : "GOV.UK Breadcrumbs",
+          "scope" : "editor",
+          "trigger" : "gov-breadcrumbs"
+        },
+        {
+          "content" : "{{ govukButton({\n\thtml: '${0:Continue}',\n\tclasses: 'govuk-button--${1:secondary, warning}'\n}) }}$99",
+          "name" : "GOV.UK Form Button",
+          "scope" : "editor",
+          "trigger" : "gov-formbutton"
+        },
+        {
+          "content" : "{{ govukButton({\n\thtml: '${0:Start now}',\n\thref: '${1:URL}',\n\tisStartButton: ${2:true or false}\n}) }}$99",
+          "name" : "GOV.UK Link\/Start Button",
+          "scope" : "editor",
+          "trigger" : "gov-linkbutton"
+        },
+        {
+          "content" : "<div class=\"govuk-button-group\">\n\t{{ govukButton({\n\t\ttext: 'Continue'\n\t}) }}\n\t\n\t{{ govukButton({\n\t\ttext: 'Save and continue',\n\t\tclasses: 'govuk-button--secondary'\n\t}) }}\n\t\n\t<a class=\"govuk-link\" href=\"#\">Cancel<\/a>\n<\/div>",
+          "name" : "GOV.UK Button Group",
+          "scope" : "editor",
+          "trigger" : "gov-button-group"
+        },
+        {
+          "content" : "{{ govukCharacterCount({\n\tname: '$0',\n\tid: '$0',\n\tvalue: data['$0'],\n\t${1:maxlength or maxwords}: '${2:200}',\n\tlabel: {\n\t\thtml: '$3',\n\t\tclasses: '${4:govuk-label--l}',\n\t\tisPageHeading: ${5:true or false}\n\t},\n\thint: {\n\t\thtml: '$6'\n\t}\n}) }}$99",
+          "name" : "GOV.UK Character\/Word Count",
+          "scope" : "editor",
+          "trigger" : "gov-character-count"
+        },
+        {
+          "content" : "{{ govukCheckboxes({\n\tidPrefix: '$0',\n\tname: '$0',\n\tclasses: '${1:govuk-checkboxes--small}',\n\tfieldset: {\n\t\tlegend: {\n\t\t\thtml: '$2',\n\t\t\tclasses: '${3:govuk-fieldset__legend--l}',\n\t\t\tisPageHeading: ${4:true or false}\n\t\t}\n\t},\n\thint: {\n\t\thtml: '$5'\n\t},\n\titems: [\n\t\t{\n\t\t\thtml: '$6',\n\t\t\tvalue: '$6',\n\t\t\tchecked: checked('$0','$6')\n\t\t},\n\t\t{\n\t\t\thtml: '$7',\n\t\t\tvalue: '$7',\n\t\t\tchecked: checked('$0','$7')\n\t\t},\n\t\t{\n\t\t\thtml: '$8',\n\t\t\tvalue: '$8',\n\t\t\tchecked: checked('$0','$8')\n\t\t}\n\t]\n}) }}$99",
+          "name" : "GOV.UK Checkboxes",
+          "scope" : "editor",
+          "trigger" : "gov-checkboxes"
+        },
+        {
+          "content" : "{\n\thtml: '$0',\n\tvalue: '$0',\n\tchecked: checked('${1:match to name }','$0')\n}$99",
+          "name" : "GOV.UK Checkbox",
+          "scope" : "editor",
+          "trigger" : "gov-checkbox"
+        },
+        {
+          "content" : "{\n\thtml: '$0',\n\tvalue: '$0',\n\tchecked: checked('${1:match to name }','$0'),\n\thint: {\n\t\thtml: '$2'\n\t}\n}$99",
+          "name" : "GOV.UK Checkbox: Hint",
+          "scope" : "editor",
+          "trigger" : "gov-checkbox-hint"
+        },
+        {
+          "content" : "{\n\tdivider: 'or'\n},\n{\n\thtml: '$0',\n\tvalue: '$0',\n\tchecked: checked('${1:match to name }','$0'),\n\tbehaviour: 'exclusive'\n}$99",
+          "name" : "GOV.UK Checkbox: None",
+          "scope" : "editor",
+          "trigger" : "gov-checkbox-none"
+        },
+        {
+          "content" : "{\n\thtml: '$0',\n\tvalue: '$0',\n\tchecked: checked('${1:match to name }','$0'),\n\tconditional: {\n\t\thtml: ${2:match to 'set' name}\n\t}\n}$99",
+          "name" : "GOV.UK Checkbox: Conditional",
+          "scope" : "editor",
+          "trigger" : "gov-checkbox-conditional"
+        },
+        {
+          "content" : "{% set cookieHtml %}\n\t<p class=\"govuk-body\">We use some essential cookies to make this service work.<\/p>\n\t<p class=\"govuk-body\">We&rsquo;d also like to use analytics cookies so we can understand how you use the service and make improvements.<\/p>\n{% endset %}\n\n{{ govukCookieBanner({\n\tariaLabel: 'Cookies on ${0:[name of service]}',\n\tmessages: [\n\t\t{\n\t\t\theadingText: 'Cookies on ${0:[name of service]}',\n\t\t\thtml: cookieHtml,\n\t\t\tactions: [\n\t\t\t\t{\n\t\t\t\t\ttext: 'Accept analytics cookies',\n\t\t\t\t\ttype: 'button',\n\t\t\t\t\tname: 'cookies',\n\t\t\t\t\tvalue: 'accept'\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\ttext: 'Reject analytics cookies',\n\t\t\t\t\ttype: 'button',\n\t\t\t\t\tname: 'cookies',\n\t\t\t\t\tvalue: 'reject'\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\ttext: 'View cookies',\n\t\t\t\t\thref: '${1:#0}'\n\t\t\t\t}\n\t\t\t]\n\t\t}\n\t]\n}) }}$99",
+          "name" : "GOV.UK Cookie Banner",
+          "scope" : "editor",
+          "trigger" : "gov-cookie-banner"
+        },
+        {
+          "content" : "{{ govukDateInput({\n\tid: '$0',\n\tnamePrefix: '$0',\n\tfieldset: {\n\t\tlegend: {\n\t\t\thtml: '$1',\n\t\t\tclasses: '${2:govuk-fieldset__legend--l}'\n\t\t\tisPageHeading: ${3:true or false}\n\t\t}\n\t},\n\thint: {\n\t\thtml: '${4:For example, 31 3 1980}'\n\t},\n\titems: [\n\t\t{\n\t\t\tname: 'day',\n\t\t\tclasses: 'govuk-input--width-2',\n\t\t\tvalue: data['$0-day']\n\t\t},\n\t\t{\n\t\t\tname: 'month',\n\t\t\tclasses: 'govuk-input--width-2',\n\t\t\tvalue: data['$0-month']\n\t\t},\n\t\t{\n\t\t\tname: 'year',\n\t\t\tclasses: 'govuk-input--width-4',\n\t\t\tvalue: data['$0-year']\n\t\t}\n\t]\n}) }}$99",
+          "name" : "GOV.UK Date Input",
+          "scope" : "editor",
+          "trigger" : "gov-date"
+        },
+        {
+          "content" : "{{ govukDetails({\n\tsummaryHtml: '$0',\n\thtml: '$1'\n}) }}$99",
+          "name" : "GOV.UK Details (show and hide, ShowyHideyThing)",
+          "scope" : "editor",
+          "trigger" : "gov-details"
+        },
+        {
+          "content" : "errorMessage: {\n\thtml: '$0'\n},$99",
+          "name" : "GOV.UK Error Message",
+          "scope" : "editor",
+          "trigger" : "gov-error-message"
+        },
+        {
+          "content" : "{{ govukErrorSummary({\n\ttitleText: 'There is a problem',\n\terrorList: [\n\t\t{\n\t\t\thtml: '$0',\n\t\t\thref: '#${1:[ID of input]}'\n\t\t}\n\t]\n}) }}$99",
+          "name" : "GOV.UK Error Summary",
+          "scope" : "editor",
+          "trigger" : "gov-error-summary"
+        },
+        {
+          "content" : "{% call govukFieldset({\n  legend: {\n\thtml: '$0',\n\tclasses: '${1:govuk-fieldset__legend--l}',\n\tisPageHeading: ${2:true or false}\n  }\n}) %}\n\n \t${99:Inputs go here}\n\n{% endcall %}",
+          "name" : "GOV.UK Fieldset",
+          "scope" : "editor",
+          "trigger" : "gov-fieldset"
+        },
+        {
+          "content" : "{{ govukFileUpload({\n\tid: '$0',\n\tname: '$0',\n\tvalue: data['$0'],\n\tlabel: {\n\t\thtml: '${1:Upload a file}',\n\t\tclasses: '${2:govuk-label--l}',\n\t\tisPageHeading: ${3:true or false}\n\t}\n}) }}$99",
+          "name" : "GOV.UK File Upload",
+          "scope" : "editor",
+          "trigger" : "gov-file-upload"
+        },
+        {
+          "content" : "{{ govukInsetText({\n\thtml: '$0'\n}) }}$99",
+          "name" : "GOV.UK Inset",
+          "scope" : "editor",
+          "trigger" : "gov-inset"
+        },
+        {
+          "content" : "{{ govukNotificationBanner({\n \thtml: '$0',\n\t ${3:type: 'success',}\n\theadingLevel: ${1:1-6. Default: 2},\n\tclasses: '$2'\n}) }}$99",
+          "name" : "GOV.UK Notification Banner",
+          "scope" : "editor",
+          "trigger" : "gov-banner"
+        },
+        {
+          "content" : "{{ govukPagination({\n\tprevious: {\n\t\thref: '#0'\n\t},\n\tnext: {\n\t\thref: '#0'\n\t},\n\titems: [\n\t\t{\n\t\t\tnumber: 1,\n\t\t\thref: '#0'\n\t\t},\n\t\t{\n\t\t\tnumber: 2,\n\t\t\tcurrent: true,\n\t\t\thref: '#0'\n\t\t},\n\t\t{\n\t\t\tnumber: 3,\n\t\t\thref: '#0'\n\t\t}\n\t]\n}) }}",
+          "name" : "GOV.UK Pagination",
+          "scope" : "editor",
+          "trigger" : "gov-pagination"
+        },
+        {
+          "content" : "{{ govukPagination({\n\tprevious: {\n\t\tlabelText: '$0',\n\t\thref: '${1:#0}'\n\t},\n\tnext: {\n\t\tlabelText: '$2',\n\t\thref: '${3:#0}'\n\t}\n}) }}",
+          "name" : "GOV.UK Pagination: Labels",
+          "scope" : "editor",
+          "trigger" : "gov-pagination-labels"
+        },
+        {
+          "content" : "{{ govukPagination({\n\tprevious: {\n\t\thref: '#0'\n\t},\n\tnext: {\n\t\thref: '#0'\n\t},\n\titems: [\n\t\t{\n\t\t\tnumber: 1,\n\t\t\thref: '#0'\n\t\t},\n\t\t{\n\t\t\tellipsis: true\n\t\t},\n\t\t{\n\t\t\tnumber: 6,\n\t\t\thref: '#0'\n\t\t},\n\t\t{\n\t\t\tnumber: 7,\n\t\t\tcurrent: true,\n\t\t\thref: '#0'\n\t\t},\n\t\t{\n\t\t\tnumber: 8,\n\t\t\thref: '#0'\n\t\t},\n\t\t{\n\t\t\tellipsis: true\n\t\t},\n\t\t{\n\t\t\tnumber: 42,\n\t\t\thref: '#0'\n\t\t}\n\t]\n}) }}",
+          "name" : "GOV.UK Pagination: Large",
+          "scope" : "editor",
+          "trigger" : "gov-pagination-large"
+        },
+        {
+          "content" : "{{ govukPanel({\n\ttitleHtml: '${0:Application complete}',\n\thtml: '${1:Your reference number<br><strong>HDJ2123F<\/strong>}',\n\theadingLevel: ${2:1-6. Default: 1},\n\tclasses: '$3'\n}) }}$99",
+          "name" : "GOV.UK Panel",
+          "scope" : "editor",
+          "trigger" : "gov-panel"
+        },
+        {
+          "content" : "{{ govukRadios({\n\tidPrefix: '$0',\n\tname: '$0',\n\tclasses: '${1:govuk-radios--small}',\n\tfieldset: {\n\t\tlegend: {\n\t\t\thtml: '$2',\n\t\t\tclasses: '${3:govuk-fieldset__legend--l}',\n\t\t\tisPageHeading: ${4:true or false}\n\t\t}\n\t},\n\thint: {\n\t\thtml: '$5'\n\t},\n\titems: [\n\t\t{\n\t\t\thtml: '$6',\n\t\t\tvalue: '$6',\n\t\t\tchecked: checked('$0','$6')\n\t\t},\n\t\t{\n\t\t\thtml: '$7',\n\t\t\tvalue: '$7',\n\t\t\tchecked: checked('$0','$7')\n\t\t},\n\t\t{\n\t\t\thtml: '$8',\n\t\t\tvalue: '$8',\n\t\t\tchecked: checked('$0','$8')\n\t\t}\n\t]\n}) }}$99",
+          "name" : "GOV.UK Radios",
+          "scope" : "editor",
+          "trigger" : "gov-radios"
+        },
+        {
+          "content" : "{\n\thtml: '$0',\n\tvalue: '$0',\n\tchecked: checked('${1:match to name }','$0')\n}$99",
+          "name" : "GOV.UK Radio",
+          "scope" : "editor",
+          "trigger" : "gov-radio"
+        },
+        {
+          "content" : "{\n\thtml: '$0',\n\tvalue: '$0',\n\tchecked: checked('${1:match to name }','$0'),\n\thint: {\n\t\thtml: '$2'\n\t}\n}$99",
+          "name" : "GOV.UK Radio: Hint",
+          "scope" : "editor",
+          "trigger" : "gov-radio-hint"
+        },
+        {
+          "content" : "{\n\tdivider: 'or'\n},\n{\n\thtml: '$0',\n\tvalue: '$0',\n\tchecked: checked('${1:match to name }','$0')\n}$99",
+          "name" : "GOV.UK Radio: Divider",
+          "scope" : "editor",
+          "trigger" : "gov-radio-divider"
+        },
+        {
+          "content" : "{\n\thtml: '$0',\n\tvalue: '$0',\n\tchecked: checked('${1:match to name }','$0'),\n\tconditional: {\n\t\thtml: ${2:match to 'Set HTML' name}\n\t}\n}$99",
+          "name" : "GOV.UK Radio: Conditional",
+          "scope" : "editor",
+          "trigger" : "gov-radio-conditional"
+        },
+        {
+          "content" : "{{ govukSelect({\n\tid: '$0',\n\tname: '$0',\n\tlabel: {\n\t\thtml: '$1',\n\t\tclasses: '${2:govuk-label--l}',\n\t\tisPageHeading: ${3:true or false}\n\t},\n\thint: {\n\t\thtml: '$4'\n\t},\n\titems: [\n\t\t{\n\t\t\tvalue: 'choose',\n\t\t\ttext: '${5:eg Choose location}',\n\t\t\tselected: true\n\t\t},\n\t\t{\n\t\t\tvalue: '$6',\n\t\t\thtml: '$6'\n\t\t},\n\t\t{\n\t\t\tvalue: '$7',\n\t\t\thtml: '$7'\n\t\t},\n\t\t{\n\t\t\tvalue: '$8',\n\t\t\thtml: '$8'\n\t\t}\n\t]\n}) }}$99",
+          "name" : "GOV.UK Select",
+          "scope" : "editor",
+          "trigger" : "gov-select"
+        },
+        {
+          "content" : "{% set ${0:Name} %}\n\t${99:Inputs go here}\n{% endset -%}",
+          "name" : "GOV.UK Set HTML",
+          "scope" : "editor",
+          "trigger" : "gov-set"
+        },
+        {
+          "content" : "{{ govukSummaryList({\n\tclasses: '${0:govuk-summary-list--no-border}',\n\trows: [\n\t\t{\n\t\t\tkey: {\n\t\t\t\ttext: '$1'\n\t\t\t},\n\t\t\tvalue: {\n\t\t\t\ttext: '$2'\n\t\t\t},\n\t\t\tactions: {\n\t\t\t\titems: [\n\t\t\t\t\t{\n\t\t\t\t\t\thref: '$3',\n\t\t\t\t\t\ttext: 'Change',\n\t\t\t\t\t\tvisuallyHiddenText: '$1'\n\t\t\t\t\t}\n\t\t\t\t]\n\t\t\t}\n\t\t}\n\t]\n}) }}$99",
+          "name" : "GOV.UK Summary List",
+          "scope" : "editor",
+          "trigger" : "gov-summary-list"
+        },
+        {
+          "content" : "{\n\tkey: {\n\t\ttext: '$1'\n\t},\n\tvalue: {\n\t\ttext: '$2'\n\t},\n\tactions: {\n\t\titems: [\n\t\t\t{\n\t\t\t\thref: '$3',\n\t\t\t\ttext: 'Change',\n\t\t\t\tvisuallyHiddenText: '$1'\n\t\t\t}\n\t\t]\n\t}\n}$99",
+          "name" : "GOV.UK Summary List Row",
+          "scope" : "editor",
+          "trigger" : "gov-summary-list-row"
+        },
+        {
+          "content" : "{{ govukTable({\n\tcaption: '$0',\n\tcaptionClasses: '${1:govuk-table__caption--m}',\n\tfirstCellIsHeader: ${2:true or false},\n\thead: [\n\t\t{\n\t\t\thtml: '$3',\n\t\t\tclasses: '${4:govuk-!-width-one-half}'\n\t\t},\n\t\t{\n\t\t\thtml: '$5',\n\t\t\tclasses: '${6:govuk-!-width-one-quarter}'\n\t\t},\n\t\t{\n\t\t\thtml: '$7',\n\t\t\tclasses: '${8:govuk-!-width-one-quarter}',\n\t\t\tformat: 'numeric'\n\t\t}\n\t],\n\trows: [\n\t\t[\n\t\t\t{\n\t\t\t\thtml: '$9'\n\t\t\t},\n\t\t\t{\n\t\t\t\thtml: '$10'\n\t\t\t},\n\t\t\t{\n\t\t\t\thtml: '$11',\n\t\t\t\t,\n\t\t\t\tformat: 'numeric'\n\t\t\t}\n\t\t]\n\t]\n}) }}$99",
+          "name" : "GOV.UK Table",
+          "scope" : "editor",
+          "trigger" : "gov-table"
+        },
+        {
+          "content" : "[\n\t{\n\t\thtml: '$0'\n\t},\n\t{\n\t\thtml: '$1'\n\t},\n\t{\n\t\thtml: '$2',\n\t\t,\n\t\tformat: 'numeric'\n\t}\n]$99",
+          "name" : "GOV.UK Table Row",
+          "scope" : "editor",
+          "trigger" : "gov-table-row"
+        },
+        {
+          "content" : "{{ govukTabs({\n\titems: [\n\t\t{\n\t\t\tlabel: '$0',\n\t\t\tid: '$1',\n\t\t\tpanel: {\n\t\t\t\thtml: ${2:match to 'Set HTML' name}\n\t\t\t}\n\t\t}\n\t]\n}) }}",
+          "name" : "GOV.UK Tabs",
+          "scope" : "editor",
+          "trigger" : "gov-tabs"
+        },
+        {
+          "content" : "{{ govukTag({\n\thtml: '$0',\n\tclasses: 'govuk-tag--${1:grey, green, turquoise, blue, purple, pink, red, orange\t, yellow or remove class for default}'\n}) }}$99",
+          "name" : "GOV.UK Tag",
+          "scope" : "editor",
+          "trigger" : "gov-tag"
+        },
+        {
+          "content" : "{{ govukInput({\n\tid: '$0',\n\tname: '$0',\n\tvalue: data['$0'],\n\tclasses: 'govuk-input--width-${1:Character width: 20, 10, 5, 4, 3, 2} govuk-!-width-${2:Fraction width: full, three-quarters, two-thirds, one-hlaf, one-third, one-quarter}',\n\tlabel: {\n\t\thtml: '$3',\n\t\tclasses: '${4:govuk-label--l}',\n\t\tisPageHeading: ${5:true or false}\n\t},\n\thint: {\n\t\thtml: '$6'\n\t},\n\tprefix: {\n\t\ttext: '${7:£}'\n\t},\n\tsuffix: {\n\t\ttext: '${8:per item}'\n\t},\n\tspellcheck: ${9:true or false}\n}) }}$99",
+          "name" : "GOV.UK Text Input",
+          "scope" : "editor",
+          "trigger" : "gov-text-input"
+        },
+        {
+          "content" : "{{ govukTextarea({\n\tname: '$0',\n\tid: '$0',\n\tvalue: data['$0'],\n\trows: '$1',\n\tlabel: {\n\t\thtml: '$2',\n\t\tclasses: '${3:govuk-label--l}',\n\t\tisPageHeading: ${4:true or false}\n\t},\n\thint: {\n\t\thtml: '$5'\n\t}\n}) }}$99",
+          "name" : "GOV.UK Textarea",
+          "scope" : "editor",
+          "trigger" : "gov-textarea"
+        },
+        {
+          "content" : "{{ govukWarningText({\n\thtml: '$0',\n\ticonFallbackText: '${1:Warning}'\n}) }}\\$3",
+          "name" : "GOV.UK Warning",
+          "scope" : "editor",
+          "trigger" : "gov-warning"
+        }
+      ],
+      "name" : "Components"
+    },
+    {
+      "children" : [
+        {
+          "content" : "{% call govukFieldset({\n\tlegend: {\n\t\thtml: 'What is your address?',\n\t\tclasses: 'govuk-fieldset__legend--l',\n\t\tisPageHeading: true\n\t}\n}) %}\n\n\t{{ govukInput({\n\t\tid: 'address-line-1',\n\t\tname: 'address-line-1',\n\t\tvalue: data['address-line-1'],\n\t\tlabel: {\n\t\t\thtml: 'Address line 1'\n\t\t},\n\t\tautocomplete: 'address-line1'\n\t}) }}\n\t\n\t{{ govukInput({\n\t\tid: 'address-line-2',\n\t\tname: 'address-line-2',\n\t\tvalue: data['address-line-2'],\n\t\tlabel: {\n\t\t\thtml: 'Address line 2 (optional)'\n\t\t},\n\t\tautocomplete: 'address-line2'\n\t}) }}\n\t\n\t{{ govukInput({\n\t\tid: 'address-town',\n\t\tname: 'address-town',\n\t\tvalue: data['address-town'],\n\t\tclasses: 'govuk-!-width-two-thirds',\n\t\tlabel: {\n\t\t\thtml: 'Town or city'\n\t\t},\n\t\tautocomplete: 'address-level2'\n\t}) }}\n\t\n\t{{ govukInput({\n\t\tid: 'address-county',\n\t\tname: 'address-county',\n\t\tvalue: data['address-county'],\n\t\tclasses: 'govuk-!-width-two-thirds',\n\t\tlabel: {\n\t\t\thtml: 'County (optional)'\n\t\t}\n\t}) }}\n\t\n\t{{ govukInput({\n\t\tid: 'address-postcode',\n\t\tname: 'address-postcode',\n\t\tvalue: data['address-postcode'],\n\t\tclasses: 'govuk-!-width-two-thirds',\n\t\tlabel: {\n\t\t\thtml: 'Postcode'\n\t\t},\n\t\tautocomplete: 'postal-code'\n\t}) }}\n\n{% endcall %}",
+          "name" : "GOV.UK Address",
+          "scope" : "editor",
+          "trigger" : "gov-address"
+        },
+        {
+          "content" : "<h1 class='govuk-heading-l'>Bank or building society account details<\/h1>\n\n{{ govukInput({\n\tid: 'name-on-the-account',\n\tname: 'name-on-the-account',\n\tvalue: data['name-on-the-account'],\n\tlabel: {\n\t\thtml: 'Name on the account'\n\t},\n\tautocomplete: 'name',\n\tspellcheck: false\n}) }}\n\n{{ govukInput({\n\tid: 'sort-code',\n\tname: 'sort-code',\n\tvalue: data['sort-code'],\n\tclasses: 'govuk-input--width-5',\n\tlabel: {\n\t\thtml: 'Sort code'\n\t},\n\thint: {\n\t\thtml: 'Must be 6 digits long'\n\t},\n\tinputmode: 'numeric',\n\tpattern: '[0-9]*',\n\tspellcheck: false\n}) }}\n\n{{ govukInput({\n\tid: 'account-number',\n\tname: 'account-number',\n\tvalue: data['account-number'],\n\tclasses: 'govuk-input--width-10',\n\tlabel: {\n\t\thtml: 'Sort code'\n\t},\n\thint: {\n\t\thtml: 'Must be between 6 and 8 digits long'\n\t},\n\tinputmode: 'numeric',\n\tpattern: '[0-9]*',\n\tspellcheck: false\n}) }}\n\n{{ govukInput({\n\tid: 'roll-number',\n\tname: 'roll-number',\n\tvalue: data['roll-number'],\n\tclasses: 'govuk-input--width-10',\n\tlabel: {\n\t\thtml: 'Building society roll number (if you have one)'\n\t},\n\thint: {\n\t\thtml: 'You can find it on your card, statement or passbook'\n\t},\n\tspellcheck: false\n}) }}\n\n{{ govukButton({\n\thtml: 'Continue'\n}) }}",
+          "name" : "GOV.UK Bank Details",
+          "scope" : "editor",
+          "trigger" : "gov-bank-details"
+        },
+        {
+          "content" : "{{ govukInput({\n\tid: 'email',\n\tname: 'email',\n\tvalue: data['email'],\n\tlabel: {\n\t\thtml: 'Email address',\n\t\tclasses: 'govuk-label--l',\n\t\tisPageHeading: true\n\t},\n\thint: {\n\t\thtml: 'We&rsquo;ll only use this to send you a receipt'\n\t},\n\ttype: 'email',\n\tautocomplete: 'email',\n\tspellcheck: false\n}) }}",
+          "name" : "GOV.UK Email Address",
+          "scope" : "editor",
+          "trigger" : "gov-email-address"
+        },
+        {
+          "content" : "{{ govukInput({\n\tid: 'national-insurance-number',\n\tname: 'national-insurance-number',\n\tvalue: data['national-insurance-number'],\n\tclasses: 'govuk-input--width-10',\n\tlabel: {\n\t\thtml: 'National Insurance number',\n\t\tclasses: 'govuk-label--l',\n\t\tisPageHeading: true\n\t},\n\thint: {\n\t\thtml: 'It&rsquo;s on your National Insurance card, benefit letter, payslip or P60. For example, &lsquo;QQ 12 34 56 C&rsquo;.'\n\t},\n\tspellcheck: false\n}) }}",
+          "name" : "GOV.UK National Insurance number",
+          "scope" : "editor",
+          "trigger" : "gov-nino"
+        },
+        {
+          "content" : "{{ govukInput({\n\tid: 'telephone-number',\n\tname: 'telephone-number',\n\tvalue: data['telephone-number'],\n\tclasses: 'govuk-input--width-20',\n\tlabel: {\n\t\thtml: 'UK telephone number',\n\t\tclasses: 'govuk-label--l',\n\t\tisPageHeading: true\n\t},\n\ttype: 'tel',\n\tautocomplete: 'tel',\n\tspellcheck: false\n}) }}\n\n{{ govukInput({\n\tid: 'telephone-number',\n\tname: 'telephone-number',\n\tvalue: data['telephone-number'],\n\tclasses: 'govuk-input--width-20',\n\tlabel: {\n\t\thtml: 'Telephone number',\n\t\tclasses: 'govuk-label--l',\n\t\tisPageHeading: true\n\t},\n\thint: {\n\t\thtml: 'For international numbers include the country code'\n\t},\n\ttype: 'tel',\n\tautocomplete: 'tel',\n\tspellcheck: false\n}) }}",
+          "name" : "GOV.UK Telephone Number",
+          "scope" : "editor",
+          "trigger" : "gov-telephone-number"
+        }
+      ],
+      "name" : "Patterns"
+    },
+    {
+      "content" : "<img src=\"\/public\/images\/${0:image.png}\" alt=\"${1:Alt text}\">$99",
+      "name" : "GOV.UK Image",
+      "scope" : "editor",
+      "trigger" : "gov-image"
+    },
+    {
+      "content" : "router.post('\/${0:[trigger page]}', function (req, res) {\n\tres.redirect('${1:[next page]}');\n})$99",
+      "name" : "GOV.UK Route",
+      "scope" : "editor",
+      "trigger" : "gov-route"
+    },
+    {
+      "content" : "router.post('\/${0:[trigger page]}', function (req, res) {\n\tif (req.session.data['${1:[input name]}'] == '${2:[value]}') {\n\t\tres.redirect('${3:[next page]}');\n\t} else {\n\t\tres.redirect('${4:[next page]}');\n\t}\n})$99\n\n",
+      "name" : "GOV.UK Route If\/Else",
+      "scope" : "editor",
+      "trigger" : "gov-if-else"
+    }
+  ]
+}
