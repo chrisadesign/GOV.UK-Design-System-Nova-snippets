@@ -3,25 +3,25 @@
     {
       "children" : [
         {
-          "content" : "<div class=\"govuk-grid-column-${0:Col size: full, one-half, one-third, two-thirds, one-quarter, three-quarters}\">\n  $1\n<\/div>",
+          "content" : "<div class=\"govuk-grid-column-${0:Col size: full, one-half, one-third, two-thirds, one-quarter, three-quarters}\">\n\t$1\n<\/div>",
           "name" : "GOV.UK Layout Column",
           "scope" : "editor",
           "trigger" : "gov-col"
         },
         {
-          "content" : "<div class=\"govuk-grid-row\">\n  <div class=\"govuk-grid-column-two-thirds\">\n\t<h1 class=\"govuk-heading-xl\">Two-thirds column<\/h1>\n\t<p class=\"govuk-body\">This is a paragraph inside a two-thirds wide column<\/p>\n  <\/div>\n<\/div>",
+          "content" : "<div class=\"govuk-grid-row\">\n\t<div class=\"govuk-grid-column-two-thirds\">\n\t\t<h1 class=\"govuk-heading-xl\">Two-thirds column<\/h1>\n\t\t<p class=\"govuk-body\">This is a paragraph inside a two-thirds wide column<\/p>\n\t<\/div>\n<\/div>",
           "name" : "GOV.UK Layout Two-thirds",
           "scope" : "editor",
           "trigger" : "gov-2"
         },
         {
-          "content" : "<div class='govuk-grid-row'>\n  <div class=\"govuk-grid-column-two-thirds\">\n\t<h1 class=\"govuk-heading-xl\">Two-thirds column<\/h1>\n\t<p class=\"govuk-body\">This is a paragraph inside a two-thirds wide column<\/p>\n  <\/div>\n\n  <div class=\"govuk-grid-column-one-thirds\">\n\t<h1 class=\"govuk-heading-xl\">One-thirds column<\/h1>\n\t<p class=\"govuk-body\">This is a paragraph inside a one-thirds wide column<\/p>\n  <\/div>\n<\/div>",
+          "content" : "<div class='govuk-grid-row'>\n\t<div class=\"govuk-grid-column-two-thirds\">\n\t\t<h1 class=\"govuk-heading-xl\">Two-thirds column<\/h1>\n\t\t<p class=\"govuk-body\">This is a paragraph inside a two-thirds wide column<\/p>\n\t<\/div>\n\t\n\t<div class=\"govuk-grid-column-one-thirds\">\n\t\t<h1 class=\"govuk-heading-xl\">One-thirds column<\/h1>\n\t\t<p class=\"govuk-body\">This is a paragraph inside a one-thirds wide column<\/p>\n\t<\/div>\n<\/div>",
           "name" : "GOV.UK Layout Two-thirds \/ One-third",
           "scope" : "editor",
           "trigger" : "gov-2-1"
         },
         {
-          "content" : "<div class='govuk-grid-row'>\n  $0\n<\/div>",
+          "content" : "<div class='govuk-grid-row'>\n\t$0\n<\/div>",
           "name" : "GOV.UK Layout Grid Row",
           "scope" : "editor",
           "trigger" : "gov-row"
@@ -252,7 +252,7 @@
           "trigger" : "gov-inset"
         },
         {
-          "content" : "{{ govukNotificationBanner({\n \thtml: '$0',\n\t ${3:type: 'success',}\n\theadingLevel: ${1:1-6. Default: 2},\n\tclasses: '$2'\n}) }}$99",
+          "content" : "{{ govukNotificationBanner({\n\thtml: '$0',\n\t${1:type: 'success',}\n\theadingLevel: ${2:1-6. Default: 2},\n\tclasses: '$3'\n}) }}$99",
           "name" : "GOV.UK Notification Banner",
           "scope" : "editor",
           "trigger" : "gov-banner"
@@ -372,7 +372,7 @@
           "trigger" : "gov-textarea"
         },
         {
-          "content" : "{{ govukWarningText({\n\thtml: '$0',\n\ticonFallbackText: '${1:Warning}'\n}) }}\\$3",
+          "content" : "{{ govukWarningText({\n\thtml: '$0',\n\ticonFallbackText: '${1:Warning}'\n}) }}",
           "name" : "GOV.UK Warning",
           "scope" : "editor",
           "trigger" : "gov-warning"
