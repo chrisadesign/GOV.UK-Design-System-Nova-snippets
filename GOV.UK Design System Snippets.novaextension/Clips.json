@@ -43,6 +43,12 @@
           "name" : "GOV.UK Task List Page",
           "scope" : "editor",
           "trigger" : "gov-task-list-page"
+        },
+        {
+          "content" : "<div class=\"govuk-grid-column-one-third\">\n\n  <aside class=\"app-related-items\" role=\"complementary\">\n\t<h2 class=\"govuk-heading-m\" id=\"subsection-title\">\n\t  Subsection\n\t<\/h2>\n\t<nav role=\"navigation\" aria-labelledby=\"subsection-title\">\n\t  <ul class=\"govuk-list govuk-!-font-size-16\">\n\t\t<li>\n\t\t  <a href=\"#\">\n\t\t\tRelated link\n\t\t  <\/a>\n\t\t<\/li>\n\t\t<li>\n\t\t  <a href=\"#\">\n\t\t\tRelated link\n\t\t  <\/a>\n\t\t<\/li>\n\t\t<li>\n\t\t  <a href=\"#\" class=\"govuk-!-font-weight-bold\">\n\t\t\tMore <span class=\"govuk-visually-hidden\">in Subsection<\/span>\n\t\t  <\/a>\n\t\t<\/li>\n\t  <\/ul>\n\t<\/nav>\n  <\/aside>\n\n<\/div>",
+          "name" : "GOV.UK Layout Aside",
+          "scope" : "editor",
+          "trigger" : "gov-layout-aside"
         }
       ],
       "name" : "Layout and Pages"
