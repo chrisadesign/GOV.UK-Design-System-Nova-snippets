@@ -12,6 +12,7 @@ Start typing `GOV.UK` to see a list of all snippets or fuzzy match any of the sp
 * Layout Two-thirds
 * Layout Two-thirds / One-third
 * Layout Grid Row
+* Layout Aside
 * Question Page
 * Confirmation Page
 * Task List Page
