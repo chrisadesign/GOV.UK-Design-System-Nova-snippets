@@ -336,7 +336,7 @@
           "trigger" : "gov-summary-list-row"
         },
         {
-          "content" : "{{ govukTable({\n\tcaption: '$0',\n\tcaptionClasses: '${1:govuk-table__caption--m}',\n\tfirstCellIsHeader: ${2:true or false},\n\thead: [\n\t\t{\n\t\t\thtml: '$3',\n\t\t\tclasses: '${4:govuk-!-width-one-half}'\n\t\t},\n\t\t{\n\t\t\thtml: '$5',\n\t\t\tclasses: '${6:govuk-!-width-one-quarter}'\n\t\t},\n\t\t{\n\t\t\thtml: '$7',\n\t\t\tclasses: '${8:govuk-!-width-one-quarter}',\n\t\t\tformat: 'numeric'\n\t\t}\n\t],\n\trows: [\n\t\t[\n\t\t\t{\n\t\t\t\thtml: '$9'\n\t\t\t},\n\t\t\t{\n\t\t\t\thtml: '$10'\n\t\t\t},\n\t\t\t{\n\t\t\t\thtml: '$11',\n\t\t\t\t,\n\t\t\t\tformat: 'numeric'\n\t\t\t}\n\t\t]\n\t]\n}) }}$99",
+          "content" : "{{ govukTable({\n\tcaption: '$0',\n\tcaptionClasses: '${1:govuk-table__caption--m}',\n\tfirstCellIsHeader: ${2:true or false},\n\thead: [\n\t\t{\n\t\t\thtml: '$3',\n\t\t\tclasses: '${4:govuk-!-width-one-half}'\n\t\t},\n\t\t{\n\t\t\thtml: '$5',\n\t\t\tclasses: '${6:govuk-!-width-one-quarter}'\n\t\t},\n\t\t{\n\t\t\thtml: '$7',\n\t\t\tclasses: '${8:govuk-!-width-one-quarter}',\n\t\t\tformat: 'numeric'\n\t\t}\n\t],\n\trows: [\n\t\t[\n\t\t\t{\n\t\t\t\thtml: '$9'\n\t\t\t},\n\t\t\t{\n\t\t\t\thtml: '$10'\n\t\t\t},\n\t\t\t{\n\t\t\t\thtml: '$11',\n\t\t\t\tformat: 'numeric'\n\t\t\t}\n\t\t]\n\t]\n}) }}$99",
           "name" : "GOV.UK Table",
           "scope" : "editor",
           "trigger" : "gov-table"
