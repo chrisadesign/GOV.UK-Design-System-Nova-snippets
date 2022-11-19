@@ -210,7 +210,7 @@
           "trigger" : "gov-cookie-banner"
         },
         {
-          "content" : "{{ govukDateInput({\n\tid: '$0',\n\tnamePrefix: '$0',\n\tfieldset: {\n\t\tlegend: {\n\t\t\thtml: '$1',\n\t\t\tclasses: '${2:govuk-fieldset__legend--l}'\n\t\t\tisPageHeading: ${3:true or false}\n\t\t}\n\t},\n\thint: {\n\t\thtml: '${4:For example, 31 3 1980}'\n\t},\n\titems: [\n\t\t{\n\t\t\tname: 'day',\n\t\t\tclasses: 'govuk-input--width-2',\n\t\t\tvalue: data['$0-day']\n\t\t},\n\t\t{\n\t\t\tname: 'month',\n\t\t\tclasses: 'govuk-input--width-2',\n\t\t\tvalue: data['$0-month']\n\t\t},\n\t\t{\n\t\t\tname: 'year',\n\t\t\tclasses: 'govuk-input--width-4',\n\t\t\tvalue: data['$0-year']\n\t\t}\n\t]\n}) }}$99",
+          "content" : "{{ govukDateInput({\n\tid: '$0',\n\tnamePrefix: '$0',\n\tfieldset: {\n\t\tlegend: {\n\t\t\thtml: '$1',\n\t\t\tclasses: '${2:govuk-fieldset__legend--l}',\n\t\t\tisPageHeading: ${3:true or false}\n\t\t}\n\t},\n\thint: {\n\t\thtml: '${4:For example, 31 3 1980}'\n\t},\n\titems: [\n\t\t{\n\t\t\tname: 'day',\n\t\t\tclasses: 'govuk-input--width-2',\n\t\t\tvalue: data['$0-day']\n\t\t},\n\t\t{\n\t\t\tname: 'month',\n\t\t\tclasses: 'govuk-input--width-2',\n\t\t\tvalue: data['$0-month']\n\t\t},\n\t\t{\n\t\t\tname: 'year',\n\t\t\tclasses: 'govuk-input--width-4',\n\t\t\tvalue: data['$0-year']\n\t\t}\n\t]\n}) }}$99",
           "name" : "GOV.UK Date Input",
           "scope" : "editor",
           "trigger" : "gov-date"
