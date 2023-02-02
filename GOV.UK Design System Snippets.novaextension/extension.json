@@ -3,7 +3,7 @@
     "name": "GOV.UK Design System Snippets",
     "organization": "Chris Armstrong",
     "description": "Snippets for the styles, components and patterns from the GOV.UK Design System.",
-    "version": "1.02",
+    "version": "1.03",
     "categories": ["clips"],
     "repository": "https://github.com/chrisadesign/GOV.UK-Design-System-Nova-snippets",
     "bugs": "https://github.com/chrisadesign/GOV.UK-Design-System-Nova-snippets/issues"

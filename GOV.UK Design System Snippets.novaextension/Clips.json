@@ -138,7 +138,7 @@
     {
       "children" : [
         {
-          "content" : "{{ govukAccordion({\n\tid: '$0',\n\theadingLevel: ${1:1-6. Default: 2},\n\tclasses: '$2',\n\titems: [\n\t\t{\n\t\t\theading: {\n\t\t\t\ttext: '$3'\n\t\t\t},\n\t\t\tsummary: {\n\t\t\t\thtml: '$4'\n\t\t\t},\n\t\t\tcontent: {\n\t\t\t\thtml: '<p>$5<\/p>'\n\t\t\t},\n\t\t\texpanded: ${6:true or false}\n\t\t}\n\t]\n}) }}$99",
+          "content" : "{{ govukAccordion({\n\tid: '$0',\n\theadingLevel: ${1:1-6. Default: 2},\n\tclasses: '$2',\n\titems: [\n\t\t{\n\t\t\theading: {\n\t\t\t\thtml: '$3'\n\t\t\t},\n\t\t\tsummary: {\n\t\t\t\thtml: '$4'\n\t\t\t},\n\t\t\tcontent: {\n\t\t\t\thtml: '<p>$5<\/p>'\n\t\t\t},\n\t\t\texpanded: ${6:true or false}\n\t\t}\n\t]\n}) }}$99",
           "name" : "GOV.UK Accordion",
           "scope" : "editor",
           "trigger" : "gov-accordion"
@@ -252,8 +252,20 @@
           "trigger" : "gov-file-upload"
         },
         {
+          "content" : "{{ govukFooter({\n\tnavigation: [\n\t\t{\n\t\t\ttitle: 'Secondary navigation left',\n\t\t\twidth: 'two-thirds',\n\t\t\tcolumns: 2,\n\t\t\titems: [\n\t\t\t\t{\n\t\t\t\t\thref: '#',\n\t\t\t\t\thtml: 'Link text'\n\t\t\t\t}\n\t\t\t]\n\t\t},\n\t\t{\n\t\t\ttitle: 'Secondary navigation right',\n\t\t\twidth: 'one-third',\n\t\t\titems: [\n\t\t\t\t{\n\t\t\t\t\thref: '#',\n\t\t\t\t\thtml: 'Link text'\n\t\t\t\t}\n\t\t\t]\n\t\t}\n\t],\n\tmeta: {\n\t\titems: [\n\t\t\t{\n\t\t\t\thref: '#',\n\t\t\t\ttext: 'Help'\n\t\t\t},\n\t\t\t{\n\t\t\t\thref: '#',\n\t\t\t\ttext: 'Cookies'\n\t\t\t},\n\t\t\t{\n\t\t\t\thref: '#',\n\t\t\t\ttext: 'Contact'\n\t\t\t},\n\t\t\t{\n\t\t\t\thref: '#',\n\t\t\t\ttext: 'Terms and conditions'\n\t\t\t},\n\t\t\t{\n\t\t\t\thref: '#',\n\t\t\t\ttext: 'Rhestr o Wasanaethau Cymraeg',\n\t\t\t\tattributes: {\n\t\t\t\t\tlang: 'cy',\n\t\t\t\t\threflang: 'cy'\n\t\t\t\t}\n\t\t\t}\n\t\t],\n\t\thtml: 'Built by the <a href='#' class='govuk-footer__link'>Government Digital Service<\/a>'\n\t}\n}) }}",
+          "name" : "GOV.UK Footer",
+          "scope" : "editor",
+          "trigger" : "gov-file-upload"
+        },
+        {
+          "content" : "{{ govukHeader({\n\thomepageUrl: '$0',\n\tserviceName: '$1',\n\tserviceUrl: '$2',\n\tnavigation: [\n\t\t{\n\t\t\thref: '#1',\n\t\t\ttext: 'Navigation item 1',\n\t\t\tactive: true\n\t\t},\n\t\t{\n\t\t\thref: '#2',\n\t\t\ttext: 'Navigation item 2'\n\t\t},\n\t\t{\n\t\t\thref: '#3',\n\t\t\ttext: 'Navigation item 3'\n\t\t},\n\t\t{\n\t\t\thref: '#4',\n\t\t\ttext: 'Navigation item 4'\n\t\t}\n\t]\n}) }}",
+          "name" : "GOV.UK Header",
+          "scope" : "editor",
+          "trigger" : "gov-file-upload"
+        },
+        {
           "content" : "{{ govukInsetText({\n\thtml: '$0'\n}) }}$99",
-          "name" : "GOV.UK Inset",
+          "name" : "GOV.UK Inset Text",
           "scope" : "editor",
           "trigger" : "gov-inset"
         },
@@ -284,6 +296,12 @@
         {
           "content" : "{{ govukPanel({\n\ttitleHtml: '${0:Application complete}',\n\thtml: '${1:Your reference number<br><strong>HDJ2123F<\/strong>}',\n\theadingLevel: ${2:1-6. Default: 1},\n\tclasses: '$3'\n}) }}$99",
           "name" : "GOV.UK Panel",
+          "scope" : "editor",
+          "trigger" : "gov-panel"
+        },
+        {
+          "content" : "{{ govukPhaseBanner({\n\ttag: {\n\t\ttext: '${0:beta}'\n\t},\n\thtml: '${1:This is a new service – your <a class=\"govuk-link\" href=\"#\">feedback<\/a> will help us to improve it.}'\n}) }}",
+          "name" : "GOV.UK Phase Banner",
           "scope" : "editor",
           "trigger" : "gov-panel"
         },
@@ -324,22 +342,34 @@
           "trigger" : "gov-select"
         },
         {
+          "content" : "{{ govukSkipLink({\n\ttext: 'Skip to main content',\n\thref: '#content'\n}) }}",
+          "name" : "GOV.UK Skip Link",
+          "scope" : "editor",
+          "trigger" : "gov-select"
+        },
+        {
           "content" : "{% set ${0:Name} %}\n\t${99:Inputs go here}\n{% endset -%}",
           "name" : "GOV.UK Set HTML",
           "scope" : "editor",
           "trigger" : "gov-set"
         },
         {
-          "content" : "{{ govukSummaryList({\n\tclasses: '${0:govuk-summary-list--no-border}',\n\trows: [\n\t\t{\n\t\t\tkey: {\n\t\t\t\ttext: '$1'\n\t\t\t},\n\t\t\tvalue: {\n\t\t\t\ttext: '$2'\n\t\t\t},\n\t\t\tactions: {\n\t\t\t\titems: [\n\t\t\t\t\t{\n\t\t\t\t\t\thref: '$3',\n\t\t\t\t\t\ttext: 'Change',\n\t\t\t\t\t\tvisuallyHiddenText: '$1'\n\t\t\t\t\t}\n\t\t\t\t]\n\t\t\t}\n\t\t}\n\t]\n}) }}$99",
+          "content" : "{{ govukSummaryList({\n\tclasses: '${0:govuk-summary-list--no-border}',\n\trows: [\n\t\t{\n\t\t\tkey: {\n\t\t\t\thtml: '$1'\n\t\t\t},\n\t\t\tvalue: {\n\t\t\t\thtml: '$2'\n\t\t\t},\n\t\t\tactions: {\n\t\t\t\titems: [\n\t\t\t\t\t{\n\t\t\t\t\t\thref: '$3',\n\t\t\t\t\t\ttext: 'Change',\n\t\t\t\t\t\tvisuallyHiddenText: ' $1'\n\t\t\t\t\t}\n\t\t\t\t]\n\t\t\t}\n\t\t}\n\t]\n}) }}$99",
           "name" : "GOV.UK Summary List",
           "scope" : "editor",
           "trigger" : "gov-summary-list"
         },
         {
-          "content" : "{\n\tkey: {\n\t\ttext: '$1'\n\t},\n\tvalue: {\n\t\ttext: '$2'\n\t},\n\tactions: {\n\t\titems: [\n\t\t\t{\n\t\t\t\thref: '$3',\n\t\t\t\ttext: 'Change',\n\t\t\t\tvisuallyHiddenText: '$1'\n\t\t\t}\n\t\t]\n\t}\n}$99",
+          "content" : "{\n\tkey: {\n\t\thtml: '$1'\n\t},\n\tvalue: {\n\t\thtml: '$2'\n\t},\n\tactions: {\n\t\titems: [\n\t\t\t{\n\t\t\t\thref: '$3',\n\t\t\t\ttext: 'Change',\n\t\t\t\tvisuallyHiddenText: ' $1'\n\t\t\t}\n\t\t]\n\t}\n}$99",
           "name" : "GOV.UK Summary List Row",
           "scope" : "editor",
           "trigger" : "gov-summary-list-row"
+        },
+        {
+          "content" : "{{ govukSummaryList({\n\tcard: {\n\t\ttitle: {\n\t\t\thtml: '${0:Card title}'\n\t\t},\n\t\tactions: {\n\t\t\titems: [\n\t\t\t\t{\n\t\t\t\t\thref: '$1',\n\t\t\t\t\thtml: '$2',\n\t\t\t\t\tvisuallyHiddenText: '$3'\n\t\t\t\t}\n\t\t\t]\n\t\t}\n\t},\n\trows: [\n\t\t{\n\t\t\tkey: {\n\t\t\t\thtml: '$4'\n\t\t\t},\n\t\t\tvalue: {\n\t\t\t\thtml: '$5'\n\t\t\t},\n\t\t\tactions: {\n\t\t\t\titems: [\n\t\t\t\t\t{\n\t\t\t\t\t\thref: '$6',\n\t\t\t\t\t\ttext: 'Change',\n\t\t\t\t\t\tvisuallyHiddenText: ' $4'\n\t\t\t\t\t}\n\t\t\t\t]\n\t\t\t}\n\t\t}\n\t]\n}) }}$99",
+          "name" : "GOV.UK Summary Card",
+          "scope" : "editor",
+          "trigger" : "gov-summary-list"
         },
         {
           "content" : "{{ govukTable({\n\tcaption: '$0',\n\tcaptionClasses: '${1:govuk-table__caption--m}',\n\tfirstCellIsHeader: ${2:true or false},\n\thead: [\n\t\t{\n\t\t\thtml: '$3',\n\t\t\tclasses: '${4:govuk-!-width-one-half}'\n\t\t},\n\t\t{\n\t\t\thtml: '$5',\n\t\t\tclasses: '${6:govuk-!-width-one-quarter}'\n\t\t},\n\t\t{\n\t\t\thtml: '$7',\n\t\t\tclasses: '${8:govuk-!-width-one-quarter}',\n\t\t\tformat: 'numeric'\n\t\t}\n\t],\n\trows: [\n\t\t[\n\t\t\t{\n\t\t\t\thtml: '$9'\n\t\t\t},\n\t\t\t{\n\t\t\t\thtml: '$10'\n\t\t\t},\n\t\t\t{\n\t\t\t\thtml: '$11',\n\t\t\t\tformat: 'numeric'\n\t\t\t}\n\t\t]\n\t]\n}) }}$99",
@@ -379,7 +409,7 @@
         },
         {
           "content" : "{{ govukWarningText({\n\thtml: '$0',\n\ticonFallbackText: '${1:Warning}'\n}) }}",
-          "name" : "GOV.UK Warning",
+          "name" : "GOV.UK Warning Text",
           "scope" : "editor",
           "trigger" : "gov-warning"
         }
@@ -429,13 +459,13 @@
     },
     {
       "content" : "router.post('\/${0:[trigger page]}', function (req, res) {\n\tres.redirect('${1:[next page]}');\n})$99",
-      "name" : "GOV.UK Route",
+      "name" : "GOV.UK Route (Prototyping)",
       "scope" : "editor",
       "trigger" : "gov-route"
     },
     {
       "content" : "router.post('\/${0:[trigger page]}', function (req, res) {\n\tif (req.session.data['${1:[input name]}'] == '${2:[value]}') {\n\t\tres.redirect('${3:[next page]}');\n\t} else {\n\t\tres.redirect('${4:[next page]}');\n\t}\n})$99\n\n",
-      "name" : "GOV.UK Route If\/Else",
+      "name" : "GOV.UK Route If\/Else (Prototyping)",
       "scope" : "editor",
       "trigger" : "gov-if-else"
     }

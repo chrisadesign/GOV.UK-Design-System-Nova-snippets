@@ -1,3 +1,8 @@
+## Version 1.03
+
+* added the new Summary Card component
+* added missing components: Footer, Header, Phase Banner, and Skip Link
+
 ## Version 1.02
 
 ### New
