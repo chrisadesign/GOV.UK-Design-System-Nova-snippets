@@ -1,3 +1,7 @@
+## Version 1.04
+
+* removed task list page
+
 ## Version 1.03
 
 * added the new Summary Card component

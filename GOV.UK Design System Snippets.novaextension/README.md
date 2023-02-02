@@ -23,7 +23,6 @@ Start typing `GOV.UK` to see a list of all snippets or fuzzy match any of the sp
 * Layout Aside
 * Question Page
 * Confirmation Page
-* Task List Page
 
 #### Typograph
 * Typography Header
