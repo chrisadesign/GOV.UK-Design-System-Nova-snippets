@@ -7,7 +7,7 @@ It was last updated with GOV.‌UK Frontend v4.5.0.
 
 ## Installation
 
-You can [install the extension (opens Nova app)](nova://extension/?id=ca.GOVUKDesignSystemSnippets&name=GOV.UK%20Design%20System%20Snippets) or on the [Nova extension page](https://extensions.panic.com/extensions/ca/ca.GOVUKDesignSystemSnippets/) and selecting install.
+Visit the [Nova extension page](https://extensions.panic.com/extensions/ca/ca.GOVUKDesignSystemSnippets/) and select install.
 
 ## Usage
 
