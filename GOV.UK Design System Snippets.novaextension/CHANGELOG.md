@@ -1,3 +1,10 @@
+## Version 1.05
+
+* added the Exit This Page component
+* added the Task List component
+* removed the old Task List layout
+* added the Tudor Crown parameter to the Header component
+
 ## Version 1.04
 
 * removed task list page

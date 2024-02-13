@@ -234,6 +234,12 @@
           "trigger" : "gov-error-summary"
         },
         {
+          "content" : "{{ govukExitThisPage({\n\ttext: '${0:Exit this page}',\n\thref: '${1:https:\/\/bbc.co.uk\/weather\/}'\n}) }}$99",
+          "name" : "GOV.UK Exit This Page",
+          "scope" : "editor",
+          "trigger" : "gov-error-summary"
+        },
+        {
           "content" : "{% call govukFieldset({\n  legend: {\n\thtml: '$0',\n\tclasses: '${1:govuk-fieldset__legend--l}',\n\tisPageHeading: ${2:true or false}\n  }\n}) %}\n\n \t${99:Inputs go here}\n\n{% endcall %}",
           "name" : "GOV.UK Fieldset",
           "scope" : "editor",
@@ -252,7 +258,7 @@
           "trigger" : "gov-file-upload"
         },
         {
-          "content" : "{{ govukHeader({\n\thomepageUrl: '$0',\n\tserviceName: '$1',\n\tserviceUrl: '$2',\n\tnavigation: [\n\t\t{\n\t\t\thref: '#1',\n\t\t\ttext: 'Navigation item 1',\n\t\t\tactive: true\n\t\t},\n\t\t{\n\t\t\thref: '#2',\n\t\t\ttext: 'Navigation item 2'\n\t\t},\n\t\t{\n\t\t\thref: '#3',\n\t\t\ttext: 'Navigation item 3'\n\t\t},\n\t\t{\n\t\t\thref: '#4',\n\t\t\ttext: 'Navigation item 4'\n\t\t}\n\t]\n}) }}",
+          "content" : "{{ govukHeader({\n\thomepageUrl: '$0',\n\tserviceName: '$1',\n\tserviceUrl: '$2',\n\tuseTudorCrown: ${3:true},\n\tnavigation: [\n\t\t{\n\t\t\thref: '#1',\n\t\t\ttext: 'Navigation item 1',\n\t\t\tactive: true\n\t\t},\n\t\t{\n\t\t\thref: '#2',\n\t\t\ttext: 'Navigation item 2'\n\t\t},\n\t\t{\n\t\t\thref: '#3',\n\t\t\ttext: 'Navigation item 3'\n\t\t},\n\t\t{\n\t\t\thref: '#4',\n\t\t\ttext: 'Navigation item 4'\n\t\t}\n\t]\n}) }}",
           "name" : "GOV.UK Header",
           "scope" : "editor",
           "trigger" : "gov-file-upload"
@@ -388,6 +394,20 @@
           "name" : "GOV.UK Tag",
           "scope" : "editor",
           "trigger" : "gov-tag"
+        },
+        {
+          "content" : "{{ govukTaskList({\n\tidPrefix: '${0:task-list}',\n\titems: [\n\t\t{\n\t\t\ttitle: {\n\t\t\t\thtml: '${1:Check eligibility}'\n\t\t\t},\n\t\t\thref: '',\n\t\t\tstatus: {\n\t\t\t\thtml: '${2:Completed}'\n\t\t\t}\n\t\t},\n\t\t{\n\t\t\ttitle: {\n\t\t\t\thtml: '$3'\n\t\t\t},\n\t\t\thref: '$4',\n\t\t\tstatus: {\n\t\t\t\ttag: {\n\t\t\t\t\thtml: '$5',\n\t\t\t\t\tclasses: '${6:govuk-tag--blue}'\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t]\n}) }}$99",
+          "name" : "GOV.UK Task List",
+          "scope" : "editor",
+          "syntax" : "twig",
+          "trigger" : "gov-tasklist"
+        },
+        {
+          "content" : "{\n\ttitle: {\n\t\thtml: '$0'\n\t},\n\thref: '$1',\n\tstatus: {\n\t\ttag: {\n\t\t\thtml: '$2',\n\t\t\tclasses: '${3:govuk-tag--blue}'\n\t\t}\n\t}\n}$99",
+          "name" : "GOV.UK Task List Item",
+          "scope" : "editor",
+          "syntax" : "twig",
+          "trigger" : "gov-tasklist-item"
         },
         {
           "content" : "{{ govukInput({\n\tid: '$0',\n\tname: '$0',\n\tvalue: data['$0'],\n\tclasses: 'govuk-input--width-${1:Character width: 20, 10, 5, 4, 3, 2} govuk-!-width-${2:Fraction width: full, three-quarters, two-thirds, one-hlaf, one-third, one-quarter}',\n\tlabel: {\n\t\thtml: '$3',\n\t\tclasses: '${4:govuk-label--l}',\n\t\tisPageHeading: ${5:true or false}\n\t},\n\thint: {\n\t\thtml: '$6'\n\t},\n\tprefix: {\n\t\ttext: '${7:£}'\n\t},\n\tsuffix: {\n\t\ttext: '${8:per item}'\n\t},\n\tspellcheck: ${9:true or false}\n}) }}$99",

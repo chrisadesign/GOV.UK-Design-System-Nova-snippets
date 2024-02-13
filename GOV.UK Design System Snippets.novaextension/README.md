@@ -1,9 +1,8 @@
-
 # GOV.UK Design System Nova snippets
 
 This extension provides Nunjucks clips/snippets for the [GOV.UK Design System](https://design-system.service.gov.uk/), including styles, components, and patterns.
 
-It was last updated with GOV.‌UK Frontend v4.5.0.
+It was last updated with GOV.‌UK Frontend v5.1.0.
 
 ## Installation
 
@@ -84,6 +83,8 @@ Start typing `GOV.UK` to see a list of all snippets or fuzzy match any of the sp
 * Table Row
 * Tabs
 * Tag
+* Task List
+* Task List Item
 * Text Input
 * Textarea
 * Warning Text
