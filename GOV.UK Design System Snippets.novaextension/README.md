@@ -2,7 +2,7 @@
 
 This extension provides Nunjucks clips/snippets for the [GOV.UK Design System](https://design-system.service.gov.uk/), including styles, components, and patterns.
 
-It was last updated with GOV.‌UK Frontend v5.1.0.
+It was last updated with GOV.‌UK Frontend v5.3.0.
 
 ## Installation
 
@@ -67,6 +67,7 @@ Start typing `GOV.UK` to see a list of all snippets or fuzzy match any of the sp
 * Pagination: Labels
 * Pagination: Large
 * Panel
+* Password Input
 * Phase Banner
 * Radios
 * Radio
