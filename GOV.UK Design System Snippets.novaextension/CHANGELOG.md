@@ -1,3 +1,7 @@
+## Version 1.06
+* added the Password Input component
+* removed `role` attributes
+
 ## Version 1.05
 
 * added the Exit This Page component

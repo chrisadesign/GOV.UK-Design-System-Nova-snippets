@@ -39,7 +39,7 @@
           "trigger" : "gov-confirmation-page"
         },
         {
-          "content" : "<div class=\"govuk-grid-column-one-third\">\n\n  <aside class=\"app-related-items\" role=\"complementary\">\n\t<h2 class=\"govuk-heading-m\" id=\"subsection-title\">\n\t  Subsection\n\t<\/h2>\n\t<nav role=\"navigation\" aria-labelledby=\"subsection-title\">\n\t  <ul class=\"govuk-list govuk-!-font-size-16\">\n\t\t<li>\n\t\t  <a href=\"#\">\n\t\t\tRelated link\n\t\t  <\/a>\n\t\t<\/li>\n\t\t<li>\n\t\t  <a href=\"#\">\n\t\t\tRelated link\n\t\t  <\/a>\n\t\t<\/li>\n\t\t<li>\n\t\t  <a href=\"#\" class=\"govuk-!-font-weight-bold\">\n\t\t\tMore <span class=\"govuk-visually-hidden\">in Subsection<\/span>\n\t\t  <\/a>\n\t\t<\/li>\n\t  <\/ul>\n\t<\/nav>\n  <\/aside>\n\n<\/div>",
+          "content" : "<div class=\"govuk-grid-column-one-third\">\n\n  <aside class=\"app-related-items\">\n\t<h2 class=\"govuk-heading-m\" id=\"subsection-title\">\n\t  Subsection\n\t<\/h2>\n\t<nav aria-labelledby=\"subsection-title\">\n\t  <ul class=\"govuk-list govuk-!-font-size-16\">\n\t\t<li>\n\t\t  <a href=\"#\">\n\t\t\tRelated link\n\t\t  <\/a>\n\t\t<\/li>\n\t\t<li>\n\t\t  <a href=\"#\">\n\t\t\tRelated link\n\t\t  <\/a>\n\t\t<\/li>\n\t\t<li>\n\t\t  <a href=\"#\" class=\"govuk-!-font-weight-bold\">\n\t\t\tMore <span class=\"govuk-visually-hidden\">in Subsection<\/span>\n\t\t  <\/a>\n\t\t<\/li>\n\t  <\/ul>\n\t<\/nav>\n  <\/aside>\n\n<\/div>",
           "name" : "GOV.UK Layout Aside",
           "scope" : "editor",
           "trigger" : "gov-layout-aside"
@@ -298,6 +298,12 @@
           "name" : "GOV.UK Panel",
           "scope" : "editor",
           "trigger" : "gov-panel"
+        },
+        {
+          "content" : "{{ govukPasswordInput({\n\tid: '$0',\n\tname: '$0',\n\tvalue: data['$0'],\n\tclasses: 'govuk-input--width-${1:Character width: 20, 10, 5, 4, 3, 2} govuk-!-width-${2:Fraction width: full, three-quarters, two-thirds, one-hlaf, one-third, one-quarter}',\n\tlabel: {\n\t\thtml: '$3',\n\t\tclasses: '${4:govuk-label--l}',\n\t\tisPageHeading: ${5:true or false}\n\t},\n\thint: {\n\t\thtml: '$6'\n\t},\n\tautocomplete: '${7:Password type: current-password, new-password}'\n}) }}$99",
+          "name" : "GOV.UK Password Input",
+          "scope" : "editor",
+          "trigger" : "gov-password-input"
         },
         {
           "content" : "{{ govukPhaseBanner({\n\ttag: {\n\t\ttext: '${0:beta}'\n\t},\n\thtml: '${1:This is a new service – your <a class=\"govuk-link\" href=\"#\">feedback<\/a> will help us to improve it.}'\n}) }}",
